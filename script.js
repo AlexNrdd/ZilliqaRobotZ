@@ -174,6 +174,7 @@
     var seed;
     var seedN  =new Array();
     var rarity;
+    var rarityStr;
     
 
     function buildAva()
@@ -207,15 +208,16 @@
                 seedN[9]=6;  //set rare head
                 seedN[10]=7; //set rare eyes
                 seedN[12]=2;
-            }
-            if (rarity> 10 && rarity<14){
+                rarityStr='rare';
+            } else if (rarity> 10 && rarity<14){
                 seedN[0]=6; //set epic body
                 seedN[6]=7; //set epic arm
                 seedN[8]=7; //set epic arm
                 seedN[9]=6;  //set rare head
                 seedN[10]=7; //set rare eyes
                 seedN[12]=3;    //set menu bar
-            }
+                rarityStr='epic';
+            } else rarityStr='common';
 
             seed= seed+ seedN[i] * Math.pow(10,i);
         }
@@ -253,6 +255,7 @@
     function buildAll()
     {
         rarity= Math.floor(Math.random()*100)+1;
+        
         buildAva();
     }
     function buildRare()
@@ -273,7 +276,8 @@
 */
     function loadImg(){
         let link = document.createElement('a');
-        link.setAttribute('download', 'CanvasAsImage.png');
+        let imgName=rarityStr+seed+'.png';
+        link.setAttribute('download', imgName);
         let canvas = document.getElementById('canvas');
       let dataURL = canvas.toDataURL('image/png');
       let url = dataURL.replace(/^data:image\/png/,'data:application/octet-stream');
