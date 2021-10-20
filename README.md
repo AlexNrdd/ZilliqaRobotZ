@@ -13,6 +13,8 @@ So any bot has a unique hex id. (But not every hex number has its own bot)
 Rare robot will be generated with in 10%
 Epic robot will be generated with in 3%
 
+Check example1-5.png for Common, example_rare1.png for Rare and example_epic1.png for epic card.
+
 To generate a new bot, click generate button on the page.
 You also may try only Rare and Epic bots with correspond button.
 
