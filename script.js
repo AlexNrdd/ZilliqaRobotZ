@@ -128,6 +128,8 @@
     head[5].src = 'img/head5.png';
     head[6] = new Image();
     head[6].src = 'img/head6.png';
+    head[6].onload = function(){
+        console.log('loaded');}
 
 
     //eyes
