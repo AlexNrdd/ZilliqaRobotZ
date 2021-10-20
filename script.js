@@ -127,7 +127,7 @@
     head[5] = new Image();
     head[5].src = 'img/head5.png';
     head[6] = new Image();
-    head[6].src = 'img/head6Rare.png';
+    head[6].src = 'img/head6.png';
 
 
     //eyes
